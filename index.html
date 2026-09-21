@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Inkpulse</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="Images/inkpulse_logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="Images/inkpulse_logo.jpg" alt="Inkpulse logo">
+            <h3><I>Inkpulse</I></h3>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#"><i class="fa fa-ravelry" aria-hidden="true"></i><b>Browse</b></a></li>
+            <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i><b>Rankings</b></a></li>
+            <li><a href="#"><i class="fa fa-pencil" aria-hidden="true"></i><b>Create</b></a></li>
+        </ul>
+
+        <div class="right-actions">
+
+            <div class="search">
+                <input type="search" name="" placeholder="Type novel's name">
+                <button class="search-btn" aria-label="Search"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+            
+
+            <a href="#" class="library-link">
+                <i class="fa fa-superpowers"></i>
+                <span>Library</span>
+            </a>
+
+            <button class="signin-btn">SIGN IN</button>
+        </div>
+    </nav>
+
+
+    <section class="banner">
+
+        <div class="banner-text"> 
+            <h1>
+                <span class="line-1">Stories that</span>
+                <span class="line-2">stay with you.</span>
+            </h1>
+            <br>
+            <p>Read, write and explore thousands of novels across every genre</p>
+
+            <div class="banner-text-btn">
+                <button>START READING</button>
+                <button>EXPLORE NOW</button>
+            </div>
+        </div> 
+
+        <div class="banner-carousel">
+
+            <button class="carousel-arrow left" id="prevBtn"><i class="fa fa-chevron-left"></i></button>
+
+            <div class="carousel-viewport">
+
+                <div class="carousel-track">
+                    <div class="book-cover">
+                        <img src="Images/The Quiet Between.png">
+                    </div>
+                    <div class="book-cover">
+                        <img src="Images/Beyond the Skyline.png">
+                    </div> 
+                    <div class="book-cover">
+                        <img src="Images/The Last Crown.png">
+                    </div>
+                    <div class="book-cover">
+                        <img src="Images/The Lost Expedition.png">
+                    </div>
+                    <div class="book-cover">
+                        <img src="Images/The Last Light.png">
+                    </div>
+                    <div class="book-cover">
+                        <img src="Images/The Next Horizon.png">
+                    </div> 
+                </div>
+
+            </div>
+
+            <button class="carousel-arrow right" id="nextBtn"><i class="fa fa-chevron-right"></i></button>
+        </div>
+
+    </section>
+
+    <section class="genres-section">
+
+        <div class="section-header">
+            <h3>Browse by Genre</h3>
+            <a href="#" class="view-all">View all <i class="fa fa-arrow-right"></i></a>
+        </div>
+
+        <div class="genre-grid">
+
+            <div class="genre-card">
+                <i class="fa fa-magic genre-icon" aria-hidden="true"></i>
+                <div class="genre-info">
+                    <h4>Fantasy</h4>
+                    <p>2,345 books</p>
+                </div>
+            </div>
+
+            <div class="genre-card">
+                <i class="fa fa-heart genre-icon" aria-hidden="true"></i>
+                <div class="genre-info">
+                    <h4>Romance</h4>
+                    <p>3,287 books</p>
+                </div>
+            </div>
+
+            <div class="genre-card">
+                <i class="fa fa-bolt genre-icon" aria-hidden="true"></i>
+                <div class="genre-info">
+                    <h4>Action</h4>
+                    <p>1,732 books</p>
+                </div>
+            </div>
+
+            <div class="genre-card">
+                <i class="fa fa-map-o genre-icon" aria-hidden="true"></i>
+                <div class="genre-info">
+                    <h4>Adventure</h4>
+                    <p>1,225 books</p>
+                </div>
+            </div>
+
+            <div class="genre-card">
+                <i class="fa fa-search-plus genre-icon" aria-hidden="true"></i>
+                <div class="genre-info">
+                    <h4>Mystery</h4>
+                    <p>1,697 books</p>
+                </div>
+            </div>
+
+            <div class="genre-card">
+                <i class="fa fa-rocket genre-icon" aria-hidden="true"></i>
+                <div class="genre-info">
+                    <h4>Sci-Fi</h4>
+                    <p>1,122 books</p>
+                </div>
+            </div>
+
+            <div class="genre-card">
+                <i class="fa fa-flask genre-icon" aria-hidden="true"></i>
+                <div class="genre-info">
+                    <h4>Horror</h4>
+                    <p>892 books</p>
+                </div>
+            </div>
+
+            <div class="genre-card">
+                <i class="fa fa-smile-o genre-icon" aria-hidden="true"></i>
+                <div class="genre-info">
+                    <h4>Comedy</h4>
+                    <p>745 books</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="discover-section">
+
+        <div class="trending">
+            <div class="section-header">
+                <h3>Trending Now</h3>
+                <a href="#" class="view-all">View all <i class="fa fa-arrow-right"></i></a>
+            </div>
+
+            <div class="trending-grid">
+
+                <a href="#" class="trend-card">
+                    <div class="trend-cover">
+                        <img src="Images/Beyond the Skyline.png">
+                    </div>
+                    <div class="trend-info">
+                        <h4>Beyond the Skyline</h4>
+                        <p class="trend-author">by Zara Eke</p>
+                        <p class="trend-views">1.8M Views</p>
+                    </div>
+                </a>
+
+                <a href="#" class="trend-card">
+                    <div class="trend-cover">
+                        <img src="Images/The Last Crown.png">
+                    </div>
+                    <div class="trend-info">
+                        <h4>The Last Crown</h4>
+                        <p class="trend-author">by Adaobi Nwachukwu</p>
+                        <p class="trend-views">2.2M Views</p>
+                    </div>
+                </a>
+
+                <a href="#" class="trend-card">
+                    <div class="trend-cover">
+                        <img src="Images/The Quiet Between.png">
+                    </div>
+                    <div class="trend-info">
+                        <h4>The Quiet Between</h4>
+                        <p class="trend-author">by Chinedu Iko</p>
+                        <p class="trend-views">1.9M Views</p>
+                    </div>
+                </a>
+
+                <a href="#" class="trend-card">
+                    <div class="trend-cover">
+                        <img src="Images/The Lost Expedition.png">
+                    </div>
+                    <div class="trend-info">
+                        <h4>The Lost Expedition</h4>
+                        <p class="trend-author">by T. A. OKafor</p>
+                        <p class="trend-views">2.1M Views</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="popular">
+            <div class="section-header">
+                <h3>Most Popular</h3>
+            </div>
+
+            <ul class="popular-list">
+
+                <li>
+                    <a href="#" class="popular-item">
+                        <span class="rank"></span>
+                        <div class="popular-info">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                        <span class="popular-views"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="popular-item">
+                        <span class="rank"></span>
+                        <div class="popular-info">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                        <span class="popular-views"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="popular-item">
+                        <span class="rank"></span>
+                        <div class="popular-info">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                        <span class="popular-views"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="popular-item">
+                        <span class="rank"></span>
+                        <div class="popular-info">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                        <span class="popular-views"></span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="popular-item">
+                        <span class="rank"></span>
+                        <div class="popular-info">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                        <span class="popular-views"></span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </section>
+
+     <section class="authors-section">
+
+        <div class="section-header">
+            <h3>Most Rated Authors</h3>
+            <a href="#" class="view-all">View all <i class="fa fa-arrow-right"></i></a>
+        </div>
+
+        <div class="authors-row">
+
+            <a href="#" class="author-card">
+                <div class="author-avatar">
+                    <img src="Images/author-1.jpg" alt="Elena Marlow" loading="lazy">
+                    <span class="author-rank">1</span>
+                </div>
+                <h4>Elena Marlow</h4>
+                <p class="author-genre">Fantasy</p>
+                <p class="author-rating"><i class="fa fa-star"></i> 4.9 <span>(12.4k)</span></p>
+            </a>
+
+            <a href="#" class="author-card">
+                <div class="author-avatar">
+                    <img src="Images/author-2.jpg" alt="Sofia Reyes" loading="lazy">
+                    <span class="author-rank">2</span>
+                </div>
+                <h4>Sofia Reyes</h4>
+                <p class="author-genre">Romance</p>
+                <p class="author-rating"><i class="fa fa-star"></i> 4.8 <span>(11.1k)</span></p>
+            </a>
+
+            <a href="#" class="author-card">
+                <div class="author-avatar">
+                    <img src="Images/author-3.png" alt="Marcus Cole" loading="lazy">
+                    <span class="author-rank">3</span>
+                </div>
+                <h4>Marcus Cole</h4>
+                <p class="author-genre">Sci-Fi</p>
+                <p class="author-rating"><i class="fa fa-star"></i> 4.8 <span>(9.8k)</span></p>
+            </a>
+
+            <a href="#" class="author-card">
+                <div class="author-avatar">
+                    <img src="Images/author-4.png" alt="Nadia Voss" loading="lazy">
+                    <span class="author-rank">4</span>
+                </div>
+                <h4>Nadia Voss</h4>
+                <p class="author-genre">Mystery</p>
+                <p class="author-rating"><i class="fa fa-star"></i> 4.7 <span>(8.6k)</span></p>
+            </a>
+
+            <a href="#" class="author-card">
+                <div class="author-avatar">
+                    <img src="Images/author-5.png" alt="Liam Chen" loading="lazy">
+                    <span class="author-rank">5</span>
+                </div>
+                <h4>Liam Chen</h4>
+                <p class="author-genre">Adventure</p>
+                <p class="author-rating"><i class="fa fa-star"></i> 4.7 <span>(7.9k)</span></p>
+            </a>
+
+            <a href="#" class="author-card">
+                <div class="author-avatar">
+                    <img src="Images/author-6.png" alt="Amara Okafor" loading="lazy">
+                    <span class="author-rank">6</span>
+                </div>
+                <h4>Amara Okafor</h4>
+                <p class="author-genre">Horror</p>
+                <p class="author-rating"><i class="fa fa-star"></i> 4.6 <span>(6.5k)</span></p>
+            </a>
+
+            <a href="#" class="author-card">
+                <div class="author-avatar">
+                    <img src="Images/author-7.png" alt="Julian Hart" loading="lazy">
+                    <span class="author-rank">7</span>
+                </div>
+                <h4>Julian Hart</h4>
+                <p class="author-genre">Comedy</p>
+                <p class="author-rating"><i class="fa fa-star"></i> 4.6 <span>(5.8k)</span></p>
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="Images/inkpulse_logo.jpg" alt="Inkpulse logo">
+                    <h3><i>Inkpulse</i></h3>
+                </div>
+
+                <p>
+                    <span>Read, write and explore thousands of novels across every genre</span>
+                    <br>
+                    <span>One story at a time.</span>
+                </p>
+
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="#" aria-label="Discord"><i class="fa fa-comments"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Browse Novels</a></li>
+                    <li><a href="#">Rankings</a></li>
+                    <li><a href="#">New Releases</a></li>
+                    <li><a href="#">Completed</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="#">Start Writing</a></li>
+                    <li><a href="#">Author Resources</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col newsletter">
+                <h4>Stay in the loop</h4>
+                <p>Get weekly picks, new chapters and writing tips straight to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" aria-label="Email address">
+                    <button type="submit" aria-label="Subscribe"><i class="fa fa-paper-plane"></i></button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Inkpulse. All rights reserved.</p>
+            <ul class="footer-legal">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Cookies</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
