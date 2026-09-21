@@ -97,7 +97,7 @@ body{
     font-size: 0.85rem;
     padding: 6px 0;
     width: 150px;
-    color: lightslategrey;
+    color: grey;
 }
 
 .search input[type="search"]::placeholder {
@@ -195,7 +195,7 @@ body{
 
 .banner-text h1 {
     color: white;
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 4.2vw, 3.5rem);
     line-height: 1.1;
 }
 
@@ -262,8 +262,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 450px;
     width: 100%;
+    min-width: 0;
+    height: clamp(230px, 32vw, 460px);
 }
 
 .carousel-viewport {
@@ -284,8 +285,9 @@ body{
 
 /* Book cover – reduced size */
 .book-cover {
-    width: 180px;
-    height: 280px; 
+    width: clamp(110px, 15vw, 180px);
+    aspect-ratio: 2 / 3;
+    height: auto;
     background: grey;
     border-radius: 8px;
     flex-shrink: 0;
@@ -295,6 +297,7 @@ body{
     transform: scale(0.9);
     z-index: 1;
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 /* Active center book */
@@ -345,7 +348,8 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0.5rem 1rem 1rem;
+    gap: 1rem;
+    margin: 0 0 1.25rem; 
     text-decoration: none;
 }
 
@@ -422,14 +426,14 @@ body{
     padding: 2.5rem 10% 3rem;
     background-color: white;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 3rem;
     align-items: start;
 }
 
 .trending-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
 }
 
@@ -676,7 +680,7 @@ body{
 
 .footer-top {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.5fr);
     gap: 2.5rem;
     padding-bottom: 2.5rem;
     border-bottom: 1px solid rgb(51, 51, 51);
@@ -832,4 +836,204 @@ body{
 
 .footer-legal a:hover {
     color: white;
+}
+
+@media (max-width: 1200px) {
+    .navbar,
+    .banner,
+    .genres-section,
+    .discover-section,
+    .footer {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .genre-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* ---------- Tablets ---------- */
+@media (max-width: 1024px) {
+    .nav-links { gap: 1.5rem; }
+    .search input[type="search"] { width: 110px; }
+
+    .banner {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        gap: 2rem;
+        padding: 3rem 6% 3.5rem;
+        text-align: center;
+    }
+
+    .banner .banner-text {
+        padding-right: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .banner-text p { max-width: 600px; }
+
+    /* centre the carousel so the arrows stay next to the books */
+    .banner-carousel {
+        width: 100%;
+        max-width: 620px;
+        margin: 0 auto;
+        height: clamp(280px, 42vw, 420px);
+    }
+
+    .carousel-viewport { max-width: 100%; }
+
+    .genre-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .discover-section {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.5rem;
+    }
+
+    .trending-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+    .footer-top {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+    }
+}
+
+/* ---------- Large phones / small tablets ---------- */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        min-height: 4rem;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding: 0.75rem 5%;
+    }
+
+    .logo { flex: 1; }
+
+    .right-actions {
+        flex: 1;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 1.25rem;
+    }
+
+    .search input[type="search"] { width: 100px; }
+    .library-link span { display: none; }
+    .signin-btn { padding: 8px 16px; font-size: 0.8rem; }
+
+    .banner { padding: 2.5rem 5% 3rem; }
+    .banner-text h1 { font-size: 2.5rem; }
+    .banner-text p { font-size: 1rem; }
+
+    .banner-carousel { height: clamp(240px, 46vw, 320px); }
+
+    .genres-section,
+    .discover-section {
+        padding: 2rem 5%;
+    }
+
+    .genre-grid { gap: 0.75rem; }
+    .genre-card { padding: 0.75rem 0.9rem; }
+    .genre-icon { font-size: 1.5rem; width: 34px; }
+
+    .trending-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .authors-section { padding: 0 5%; }
+    .author-card { flex: 0 0 140px; }
+    .author-avatar { width: 92px; height: 92px; }
+
+    .footer { padding-left: 5%; padding-right: 5%; }
+    .footer-top { gap: 1.75rem; }
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 600px) {
+    .logo h3 { font-size: 1.1rem; }
+    .logo img { width: 30px; height: 30px; }
+
+    .search { padding-left: 10px; }
+    .search input[type="search"] { width: 80px; font-size: 0.8rem; }
+    .search .search-btn { width: 28px; height: 28px; }
+
+    .banner-text h1 { font-size: 2rem; }
+
+    .banner-text .banner-text-btn {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .banner-text .banner-text-btn button {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .banner-carousel { height: 250px; }
+
+    .genre-grid { grid-template-columns: 1fr; }
+
+    .trending-grid { gap: 0.75rem; }
+
+    .popular-item { gap: 0.75rem; padding: 0.75rem 0.25rem; }
+
+    .footer-top { grid-template-columns: 1fr; }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footer-legal { justify-content: center; gap: 1rem; }
+
+    .newsletter-form input { font-size: 0.8rem; }
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 480px) {
+    .navbar { padding-left: 4%; padding-right: 4%; }
+
+    .nav-links { gap: 0.8rem; }
+    .nav-links li a { font-size: 0.75rem; }
+    .nav-links a i { margin-right: 4px; }
+
+    .right-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search { flex: 1; }
+    .search input[type="search"] { width: 100%; }
+
+    .banner { padding: 2rem 4% 2.5rem; }
+    .banner-text h1 { font-size: 1.7rem; }
+    .banner-text p { font-size: 0.9rem; }
+
+    .banner-carousel { height: 220px; }
+
+    .carousel-arrow {
+        width: 34px;
+        height: 34px;
+        font-size: 0.9rem;
+    }
+    .carousel-arrow.left { left: 0; }
+    .carousel-arrow.right { right: 0; }
+
+    .section-header h3 { font-size: 1.05rem; }
+
+    .genre-card { padding: 0.7rem 0.8rem; }
+    .genre-info h4 { font-size: 0.9rem; }
+
+    .author-card { flex: 0 0 120px; }
+    .author-avatar { width: 80px; height: 80px; }
 }
